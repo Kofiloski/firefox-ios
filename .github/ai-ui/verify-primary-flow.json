@@ -1,0 +1,8 @@
+{
+  "name": "Firefox toolbar creates a real second tab",
+  "description": "Maps to the existing TabsTestsIphone/testAddTabByLongPressTabsButton XCTest. Its native launch fixtures clear the test profile and skip onboarding; it opens a tab through the toolbar's long-press menu and asserts that the real tab tray contains two cells. This fixed native runner requires no LLM key and rejects other scenario steps.",
+  "steps": [
+    { "action": "launch" },
+    { "action": "assertVisible", "id": "Tabs Tray" }
+  ]
+}

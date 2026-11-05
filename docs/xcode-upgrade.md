@@ -1,3 +1,9 @@
+---
+summary: Checklist for updating Firefox and Focus Xcode versions and verifying their builds.
+read_when:
+  - Updating the Xcode or Simulator versions used by this repository
+---
+
 # Xcode Upgrade Checklist
 
 Reference: https://xcodereleases.com/
