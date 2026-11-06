@@ -2,6 +2,7 @@
 summary: Reproduce the independent Firefox native UI showcase without a model API key.
 read_when:
   - Running the public skills workflow or its local equivalent
+  - Comparing upstream releases and reviewing generated UI test reports
   - Interpreting the Firefox tab-creation test evidence
 ---
 
@@ -98,3 +99,9 @@ The app profile in `.github/ai-ui/release-profile.json` owns stable tag filters,
 the source seed for the harness overlay, reviewed launch presets, and build/test
 configuration. A changed upstream project may require a reviewed profile update.
 No live provider generation or full release-flow execution has been verified yet.
+
+The [credential-gate run on November 6, 2026](https://github.com/Kofiloski/firefox-ios/actions/runs/42296868891)
+resolved firefox-v159.1 → firefox-v160.0, skipped the macOS/planning/execution jobs, and
+[archived a blocked report and evidence](https://github.com/Kofiloski/firefox-ios/releases/tag/ui-check-62cb1733381a4b2dae69).
+The final coverage gate failed deliberately. This verifies missing-key handling
+and historical publication; it does not establish generated UI coverage.
