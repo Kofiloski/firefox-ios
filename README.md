@@ -8,11 +8,13 @@ This independent fork demonstrates the [ios-ai-ui-check action](https://github.c
 - **Verified run:** [Passed on November 6, 2026](https://github.com/Kofiloski/firefox-ios/actions/runs/42133538018). 1 UI test passed through our action, with zero failures or skips.
 - **Coverage:** Pinned Firefox branch snapshot. This baseline covers tab creation; release-wide coverage and Firefox Focus are outside its scope.
 
-The manual workflow uses a checked-in scenario. No AXe or model API key is required; live AI planning is not exercised by this example.
+The baseline workflow uses a checked-in scenario. No AXe or model API key is required; live AI planning is not exercised by this example.
 
 [Run in GitHub Actions](https://github.com/Kofiloski/firefox-ios/actions/workflows/skills-public-check.yml) · [Reproduce and inspect coverage](docs/skills-showcase.md) · [Get the toolkit](https://github.com/Kofiloski/ios-release-quality-toolkit)
 
 This fork is not affiliated with or endorsed by the upstream project. Its source attribution and license are retained below.
+
+Release-diff generation is configured separately in [Release diff UI regressions](.github/workflows/skills-release-regression.yml). It requires provider credentials and an explicit scheduling opt-in; [setup and verification status](docs/skills-showcase.md#release-diff-regressions). No live model-generated release run has been verified yet.
 
 <details>
 <summary>Upstream app documentation</summary>

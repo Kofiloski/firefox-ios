@@ -30,8 +30,8 @@ PY
 
 xcodebuild build-for-testing \
   -project firefox-ios/Client.xcodeproj -scheme SkillsPublicUI -configuration Debug \
-  -testPlan Smoketest \
-  -only-testing:XCUITests/TabsTestsIphone/testAddTabByLongPressTabsButton \
+  -testPlan "${AI_UI_TEST_PLAN:-Smoketest}" \
+  "-only-testing:${AI_UI_TEST_SELECTOR:-XCUITests/TabsTestsIphone/testAddTabByLongPressTabsButton}" \
   -destination "platform=iOS Simulator,id=$AI_UI_SIMULATOR_UDID,arch=$(uname -m)" \
   -derivedDataPath "$DERIVED_DATA_PATH" \
   -disableAutomaticPackageResolution -onlyUsePackageVersionsFromResolvedFile \
