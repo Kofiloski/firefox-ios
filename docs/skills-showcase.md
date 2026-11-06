@@ -52,7 +52,10 @@ resolved packages rather than claiming they are fully locked.
 
 The local Simulator app test build and one native UI test passed, with zero
 failures or skips. The released action's scripts captured video and an XCTest
-result bundle. Hosted execution is a separate check. This verifies the selected
+result bundle. The [hosted run](https://github.com/Kofiloski/firefox-ios/actions/runs/42133538018)
+also passed: one test, zero failures/skips, with the native long-press, tab
+creation and tray assertion confirmed in its log and a 14 MB video retained.
+This verifies the selected
 tab-creation flow; it does not establish all Firefox features, release-wide
 coverage, physical-device behavior or live model planning.
 
