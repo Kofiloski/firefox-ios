@@ -1,9 +1,21 @@
-# Firefox for iOS and Focus iOS
+# Firefox for iOS: iOS UI Check showcase
 
-Independent skills showcase: [reproduce the native tab-creation check](docs/skills-showcase.md).
-This example needs no model API key and is not endorsed by Mozilla.
+[![Native UI check](https://github.com/Kofiloski/firefox-ios/actions/workflows/skills-public-check.yml/badge.svg?branch=skills-showcase&event=workflow_dispatch)](https://github.com/Kofiloski/firefox-ios/actions/workflows/skills-public-check.yml)
 
-Verified hosted run: [1 native tab-creation test passed](https://github.com/Kofiloski/firefox-ios/actions/runs/42133538018).
+This independent fork demonstrates the [ios-ai-ui-check action](https://github.com/Kofiloski/ios-ai-ui-check) against the real [Firefox for iOS app](https://github.com/mozilla-mobile/firefox-ios). The workflow builds the app, invokes the released v0.6.0 action, and collects native XCTest results and video.
+
+- **Tested flow:** Long-press the tabs button, create a tab, and assert two real tab-tray cells.
+- **Verified run:** [Passed on November 6, 2026](https://github.com/Kofiloski/firefox-ios/actions/runs/42133538018). 1 UI test passed through our action, with zero failures or skips.
+- **Coverage:** Pinned Firefox branch snapshot. This baseline covers tab creation; release-wide coverage and Firefox Focus are outside its scope.
+
+The manual workflow uses a checked-in scenario. No AXe or model API key is required; live AI planning is not exercised by this example.
+
+[Run in GitHub Actions](https://github.com/Kofiloski/firefox-ios/actions/workflows/skills-public-check.yml) · [Reproduce and inspect coverage](docs/skills-showcase.md) · [Get the toolkit](https://github.com/Kofiloski/ios-release-quality-toolkit)
+
+This fork is not affiliated with or endorsed by the upstream project. Its source attribution and license are retained below.
+
+<details>
+<summary>Upstream app documentation</summary>
 
 Download [Firefox iOS](https://apps.apple.com/app/firefox-web-browser/id989804926) and [Focus iOS](https://itunes.apple.com/app/id1055677337) on the App Store.
 
@@ -57,3 +69,5 @@ Want to contribute on the codebase but don't know where to start? Here is a list
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at https://mozilla.org/MPL/2.0/
+
+</details>
