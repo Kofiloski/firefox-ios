@@ -3,6 +3,8 @@
 Independent skills showcase: [reproduce the native tab-creation check](docs/skills-showcase.md).
 This example needs no model API key and is not endorsed by Mozilla.
 
+Verified hosted run: [1 native tab-creation test passed](https://github.com/Kofiloski/firefox-ios/actions/runs/42133538018).
+
 Download [Firefox iOS](https://apps.apple.com/app/firefox-web-browser/id989804926) and [Focus iOS](https://itunes.apple.com/app/id1055677337) on the App Store.
 
 <table>
