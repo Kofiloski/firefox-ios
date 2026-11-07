@@ -16,6 +16,18 @@ ARTIFACTS_DIR="${AI_UI_ARTIFACTS_DIR:-$ROOT_DIR/artifacts/ai-ui/$(date +%Y%m%d-%
 DERIVED_DATA_PATH="${AI_UI_DERIVED_DATA_PATH:-$ROOT_DIR/.derivedData/ai-ui}"
 : "${AI_UI_SIMULATOR_UDID:?Select a dedicated test Simulator first}"
 
+python3 - "$AI_UI_SIMULATOR_UDID" <<'PY'
+import json
+import subprocess
+import sys
+
+devices = json.loads(subprocess.check_output(['xcrun', 'simctl', 'list', 'devices', 'available', '--json'], text=True))
+device = next((device for group in devices['devices'].values() for device in group
+               if device.get('udid', '').casefold() == sys.argv[1].casefold()), {})
+if not device.get('deviceTypeIdentifier', '').startswith('com.apple.CoreSimulator.SimDeviceType.iPhone-'):
+    raise SystemExit('This baseline requires an iPhone Simulator; the upstream test returns without assertions on iPad.')
+PY
+
 # The native test owns launch fixtures, long-press interaction and tab-count assertions.
 python3 - "$SCENARIO_PATH" <<'PY'
 import json
